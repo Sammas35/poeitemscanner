@@ -1,11 +1,12 @@
 {
   "name": "poeitemscanner",
   "version": "0.0.0",
-  "main":"main.js"
+  "main": "main.js",
   "license": "MIT",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
+    "electron": "electron .",
     "build": "ng build --prod",
     "test": "ng test",
     "lint": "ng lint",
@@ -34,6 +35,7 @@
     "@types/jasminewd2": "~2.0.2",
     "@types/node": "~6.0.60",
     "codelyzer": "^4.0.1",
+    "electron": "^1.8.2",
     "jasmine-core": "~2.8.0",
     "jasmine-spec-reporter": "~4.2.1",
     "karma": "~2.0.0",

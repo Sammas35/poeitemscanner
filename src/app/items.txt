@@ -1,0 +1,294 @@
+Rarity: Magic
+Bloodthirsty Eternal Sword of the Leviathan
+--------
+One Handed Sword
+Physical Damage: 93-155 (augmented)
+Critical Strike Chance: 5.00%
+Attacks per Second: 1.50
+Weapon Range: 9
+--------
+Requirements:
+Level: 66
+Str: 104
+Dex: 122
+--------
+Sockets: G R-G 
+--------
+Item Level: 66
+--------
++475 to Accuracy Rating
+--------
+128% increased Physical Damage
++39 to Strength
+
+Rarity: Rare
+Soul Spire
+Imbued Wand
+--------
+Wand
+Physical Damage: 24-44
+Critical Strike Chance: 7.00%
+Attacks per Second: 1.50
+--------
+Requirements:
+Level: 59
+Int: 188
+--------
+Sockets: B B 
+--------
+Item Level: 70
+--------
+34% increased Spell Damage
+--------
++1 to Level of Socketed Fire Gems
+16% increased Cast Speed
++14% to Fire Resistance
++5 Life gained for each Enemy hit by Attacks
+
+Rarity: Rare
+Rapture Knell
+Crystal Sceptre
+--------
+One Handed Mace
+Physical Damage: 35-52
+Critical Strike Chance: 7.86% (augmented)
+Attacks per Second: 1.25
+Weapon Range: 9
+--------
+Requirements:
+Level: 41
+Str: 59
+Int: 85
+--------
+Sockets: B-B-B 
+--------
+Item Level: 44
+--------
+30% increased Elemental Damage
+--------
+12% increased Spell Damage
+5% increased Cast Speed
+21% increased Critical Strike Chance
++12 to maximum Mana
++21% to Fire Resistance
+
+Rarity: Magic
+Frost Weaver's Quartz Sceptre of Shocking
+--------
+One Handed Mace
+Physical Damage: 17-26
+Critical Strike Chance: 6.50%
+Attacks per Second: 1.25
+Weapon Range: 9
+--------
+Requirements:
+Level: 15
+Str: 25
+Int: 35
+--------
+Sockets: B-B-B 
+--------
+Item Level: 17
+--------
+20% increased Elemental Damage
+--------
++1 to Level of Socketed Cold Gems
+7% chance to Shock
+
+Rarity: Rare
+Glyph Slippers
+Goliath Greaves
+--------
+Quality: +7% (augmented)
+Armour: 219 (augmented)
+--------
+Requirements:
+Level: 54
+Str: 95
+--------
+Sockets: R 
+--------
+Item Level: 61
+--------
+17% increased Armour
++72 to maximum Life
+9% increased Rarity of Items found
++40% to Lightning Resistance
+30% increased Movement Speed
+8% increased Stun and Block Recovery
++28 to Dexterity
+
+Rarity: Rare
+Sol Sole
+Ironscale Boots
+--------
+Armour: 34
+Evasion Rating: 34
+--------
+Requirements:
+Level: 18
+Str: 19
+Dex: 19
+--------
+Sockets: B R-R 
+--------
+Item Level: 26
+--------
++19 to Strength
++39 to maximum Life
++13% to Cold Resistance
+15% increased Movement Speed
+
+Rarity: Rare
+Victory Hunger
+Noble Axe
+--------
+Two Handed Axe
+Physical Damage: 91-129 (augmented)
+Critical Strike Chance: 6.25% (augmented)
+Attacks per Second: 1.52 (augmented)
+Weapon Range: 11
+--------
+Requirements:
+Level: 54
+Str: 113
+Dex: 65
+--------
+Sockets: G R R 
+--------
+Item Level: 72
+--------
++1 to Level of Socketed Melee Gems
+Adds 26 to 41 Physical Damage
+17% increased Attack Speed
+25% increased Critical Strike Chance
+18% increased Stun Duration on Enemies
+50% increased Critical Strike Chance if you have Killed Recently
+--------
+Shaper Item
+
+Rarity: Rare
+Foul Vision
+Murderous Eye Jewel
+--------
+Abyss
+--------
+Requirements:
+Level: 27
+--------
+Item Level: 73
+--------
+Adds 1 to 3 Physical Damage to Attacks
+Adds 9 to 18 Fire Damage to Axe Attacks
+Adds 2 to 27 Lightning Damage to Axe Attacks
+18% increased Damage if you've Killed Recently
+--------
+Place into an Abyssal Socket on an Item or into an allocated Jewel Socket on the Passive Skill Tree. Right click to remove from the Socket.
+--------
+Note: ~price 3 chaos
+
+Rarity: Rare
+Glyph Gorget
+Amber Amulet
+--------
+Requirements:
+Level: 51
+--------
+Item Level: 70
+--------
++30 to Strength
+--------
+25% increased Lightning Damage
+34% increased Global Critical Strike Chance
++10% to Global Critical Strike Multiplier
+12% increased Evasion Rating
++29 to maximum Energy Shield
+--------
+Note: ~price 5 chaos
+
+Rarity: Rare
+Onslaught Dash
+Titan Greaves
+--------
+Armour: 306 (augmented)
+--------
+Requirements:
+Level: 68
+Str: 120
+--------
+Sockets: R-R 
+--------
+Item Level: 75
+--------
++19 to Strength
+27% increased Armour
++65 to maximum Life
+30% increased Movement Speed
+
+Rarity: Rare
+Golem Etcher
+Jade Chopper
+--------
+Two Handed Axe
+Physical Damage: 22-37 (augmented)
+Elemental Damage: 4-6 (augmented)
+Critical Strike Chance: 5.00%
+Attacks per Second: 1.20
+Weapon Range: 11
+--------
+Requirements:
+Level: 9
+Str: 31
+--------
+Sockets: R-G R 
+--------
+Item Level: 17
+--------
+16% increased Physical Damage
+Adds 2 to 5 Physical Damage
++14 to Strength
++13 to Dexterity
+Adds 4 to 6 Fire Damage
++14% to Fire Resistance
++5 to Accuracy Rating
+
+Rarity: Rare
+Rage Span
+Deerskin Boots
+--------
+Evasion Rating: 119 (augmented)
+--------
+Requirements:
+Level: 23
+Dex: 42
+--------
+Sockets: G-G-G 
+--------
+Item Level: 35
+--------
++45 to Evasion Rating
++14 to maximum Life
++11% to Cold Resistance
+15% increased Movement Speed
+
+Rarity: Rare
+Woe Dash
+Velvet Slippers
+--------
+Energy Shield: 8
+--------
+Requirements:
+Level: 42
+Int: 21
+--------
+Sockets: R-G 
+--------
+Item Level: 40
+--------
+8% increased Attack and Cast Speed if you've Killed Recently
+--------
++56 to maximum Life
+1.3 Life Regenerated per second
++17% to Cold Resistance
+20% increased Movement Speed
++24% to Fire Resistance
