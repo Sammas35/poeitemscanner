@@ -1,6 +1,12 @@
 import {Component, OnInit} from '@angular/core';
 import {ClipboardService} from './clipboard/clipboard.service';
+import {Item} from "./domain/item";
+
 import 'rxjs/add/operator/distinct';
+import "rxjs/add/operator/filter";
+import "rxjs/add/operator/map";
+import {ItemScanner} from "./domain/item-scanner";
+import {ConditionService} from "./condition-service/condition.service";
 
 
 @Component({
@@ -9,14 +15,23 @@ import 'rxjs/add/operator/distinct';
     styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit {
-    title = 'app';
 
-    constructor(private clipboardService: ClipboardService) {
+    itemScanner: ItemScanner;
+    itemList: Item[] = [];
+
+    constructor(private clipboardService: ClipboardService, conditionService: ConditionService) {
+        // this.itemScanner = new ItemScanner(conditionService);
+        this.itemScanner = new ItemScanner();
     }
 
     ngOnInit(): void {
         this.clipboardService.getChanges()
             .distinct()
-            .subscribe((text) => console.log('Neuer Text im Clipboard', text));
+            .map(text => Item.createFromString(text))
+            .filter(item => item !== null)
+            .filter(item => this.itemScanner.scanItem(item))
+            .subscribe((item) => {
+                this.itemList.push(item);
+            });
     }
 }

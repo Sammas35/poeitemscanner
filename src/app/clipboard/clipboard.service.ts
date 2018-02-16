@@ -8,7 +8,7 @@ const {clipboard} = electron.remote.require('electron');
 @Injectable()
 export class ClipboardService {
 
-    private subject: BehaviorSubject<string> = new BehaviorSubject('Egalo');
+    private subject: BehaviorSubject<string> = new BehaviorSubject(undefined);
     public readonly content = this.subject.asObservable();
 
     constructor() {
