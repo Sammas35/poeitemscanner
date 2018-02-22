@@ -11,13 +11,14 @@ module.exports = function (config) {
             require('karma-electron'),
             require('karma-jasmine-html-reporter'),
             require('karma-coverage-istanbul-reporter'),
-            require('@angular/cli/plugins/karma')
+            require('@angular/cli/plugins/karma'),
+            require('karma-mocha-reporter')
         ],
         preprocessors: {
             '**/*.js': ['electron']
         },
         client: {
-            clearContext: false, // leave Jasmine Spec Runner output visible in browser
+            // clearContext: false, // leave Jasmine Spec Runner output visible in browser
             useIframe: false
         },
         coverageIstanbulReporter: {
@@ -27,7 +28,8 @@ module.exports = function (config) {
         angularCli: {
             environment: 'dev'
         },
-        reporters: ['progress', 'kjhtml'],
+        // reporters: ['progress', 'kjhtml'],
+        reporters: ['mocha'],
         port: 9876,
         colors: true,
         logLevel: config.LOG_INFO,

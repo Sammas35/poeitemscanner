@@ -1,9 +1,7 @@
-import {Injectable} from '@angular/core';
+import {Inject, Injectable} from '@angular/core';
 import {Observable} from 'rxjs/Observable';
 import {BehaviorSubject} from 'rxjs/BehaviorSubject';
-
-declare var electron: any;
-const {clipboard} = electron.remote.require('electron');
+import {ElectronService} from 'ngx-electron';
 
 @Injectable()
 export class ClipboardService {
@@ -11,11 +9,10 @@ export class ClipboardService {
     private subject: BehaviorSubject<string> = new BehaviorSubject(undefined);
     public readonly content = this.subject.asObservable();
 
-    constructor() {
-
+    constructor(@Inject(ElectronService) private electronService : ElectronService) {
         setInterval(() => {
             if (this.subject) {
-                this.subject.next(clipboard.readText());
+                this.subject.next(this.electronService.clipboard.readText());
             }
         }, 100);
     }

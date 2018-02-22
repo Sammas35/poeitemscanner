@@ -8,25 +8,8 @@ export class ConditionGroup {
 
     scanItem(item: Item) {
 
-        this.conditionList.every(condition => {
-            condition.regex = /^[+](\d+) to Strength$/;
-            condition.limit = 30;
-
-            if (item.lineList.some(line => {
-                    let match = line.match(condition.regex);
-                    let value;
-
-                    if (!match) {
-                        return false;
-                    }
-
-                    value = +match[1];
-
-                    return value >= condition.limit;
-                })) {
-                return true;
-            }
-            return false;
+        return this.conditionList.every(condition => {
+            return condition.scanItem(item);
         });
     }
 }

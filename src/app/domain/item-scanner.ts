@@ -6,8 +6,8 @@ import {Condition} from "./condition";
 export class ItemScanner {
 
     // constructor(private conditionService: ConditionService) {
-    constructor() {
-    }
+    // constructor() {
+    // }
 
 
     public scanItem(item: Item): boolean {

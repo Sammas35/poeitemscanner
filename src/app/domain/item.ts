@@ -26,8 +26,6 @@ export class Item {
             return null;
         }
 
-
-
         // lineReader.readToItemLevel();
 
         // if (!result.readName(lineReader.next())) {

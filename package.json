@@ -12,7 +12,7 @@
     "start": "ng serve",
     "electron": "electron .",
     "build": "ng build --prod",
-    "test": "ng test",
+    "test": "ng test --colors=true",
     "lint": "ng lint",
     "e2e": "ng e2e"
   },
@@ -28,6 +28,7 @@
     "@angular/platform-browser-dynamic": "^5.2.0",
     "@angular/router": "^5.2.0",
     "core-js": "^2.4.1",
+    "ngx-electron": "^1.0.4",
     "rxjs": "^5.5.6",
     "zone.js": "^0.8.19"
   },
@@ -48,6 +49,7 @@
     "karma-electron": "^5.2.2",
     "karma-jasmine": "~1.1.0",
     "karma-jasmine-html-reporter": "^0.2.2",
+    "karma-mocha-reporter": "^2.2.5",
     "protractor": "~5.1.2",
     "ts-node": "~4.1.0",
     "tslint": "~5.9.1",
