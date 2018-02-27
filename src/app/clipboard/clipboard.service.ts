@@ -12,7 +12,7 @@ export class ClipboardService {
     constructor(@Inject(ElectronService) private electronService : ElectronService) {
         setInterval(() => {
             if (this.subject) {
-                this.subject.next(this.electronService.clipboard.readText());
+                this.subject.next(this.electronService.clipboard.readText().trim());
             }
         }, 100);
     }

@@ -1,0 +1,9 @@
+
+<h3>Items found:</h3>
+
+<div style="background-color: lightgray">
+    <div *ngFor="let item of itemList"
+         [class]="item.rarity">
+        {{item.name}}
+    </div>
+</div>

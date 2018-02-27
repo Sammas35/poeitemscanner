@@ -16,22 +16,9 @@ import {ConditionService} from "./condition-service/condition.service";
 })
 export class AppComponent implements OnInit {
 
-    itemScanner: ItemScanner;
-    itemList: Item[] = [];
-
-    constructor(private clipboardService: ClipboardService, conditionService: ConditionService) {
-        // this.itemScanner = new ItemScanner(conditionService);
-        this.itemScanner = new ItemScanner();
+    constructor() {
     }
 
     ngOnInit(): void {
-        this.clipboardService.getChanges()
-            .distinct()
-            .map(text => Item.createFromString(text))
-            .filter(item => item !== null)
-            .filter(item => this.itemScanner.scanItem(item))
-            .subscribe((item) => {
-                this.itemList.push(item);
-            });
     }
 }

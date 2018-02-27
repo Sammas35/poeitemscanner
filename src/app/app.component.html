@@ -1,6 +1,8 @@
-<div style="background-color: darkgray">
-    <div *ngFor="let item of itemList"
-         [class]="item.rarity">
-        {{item.name}}
-    </div>
-</div>
+<nav>
+    <a routerLink="/itemview"
+       routerLinkActive="active">Scanning</a>
+    <a routerLink="/config"
+       routerLinkActive="active">Configuration</a>
+</nav>
+
+<router-outlet></router-outlet>

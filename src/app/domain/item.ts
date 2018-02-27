@@ -32,6 +32,15 @@ export class Item {
         //     return null;
         // }
 
+        // Name
+        // BaseStats
+        // Requirements
+        // (Sockets)
+        // ItemLevel
+        // (Implicit)
+        // Explicit
+        // Shaper/Elder
+
         console.log('createFromString', result);
 
         return result;
