@@ -11,11 +11,10 @@ import {ClipboardService} from "../clipboard/clipboard.service";
 })
 export class ItemListComponent implements OnInit {
 
-    itemScanner: ItemScanner;
+
     itemList: Item[] = [];
 
-    constructor(private clipboardService: ClipboardService, conditionService: ConditionService) {
-        this.itemScanner = new ItemScanner();
+    constructor(private clipboardService: ClipboardService, private conditionService: ConditionService) {
     }
 
     ngOnInit(): void {
@@ -23,7 +22,7 @@ export class ItemListComponent implements OnInit {
             .distinct()
             .map(text => Item.createFromString(text))
             .filter(item => item !== null)
-            .filter(item => this.itemScanner.scanItem(item))
+            .filter(item => this.conditionService.itemScanner.scanItem(item))
             .subscribe((item) => {
                 this.itemList.push(item);
             });

@@ -1,6 +1,8 @@
+///<reference path="condition-group.ts"/>
 import {ConditionGroup} from "./condition-group";
 import {Item} from "./item";
 import {Condition} from "./condition";
+import {Matching} from "./matching";
 
 describe('ConditionGroup', function () {
     let conditionGroup: ConditionGroup = new ConditionGroup();
@@ -91,6 +93,29 @@ describe('ConditionGroup', function () {
             conditionGroup.conditionList.push(new Condition(/^[+](\d+) to Dexterity$/, 30));
 
             expect(conditionGroup.scanItem(item)).toBeFalsy();
+        });
+        it('should scan an item with two out of three conditions matching', function () {
+
+            let conditionGroup : ConditionGroup;
+            let item : Item;
+
+            item = new Item();
+            item.name = 'Strength Item';
+
+            item.lineList = [
+                '+32 to Strength',
+                '+32 to Intelligence'
+            ];
+
+            conditionGroup = new ConditionGroup();
+
+            conditionGroup.name = 'RF Helmet';
+            conditionGroup.matching = new Matching('count', "2");
+            conditionGroup.conditionList.push(new Condition(/^[+](\d+) to Strength$/, 30));
+            conditionGroup.conditionList.push(new Condition(/^[+](\d+) to Dexterity$/, 30));
+            conditionGroup.conditionList.push(new Condition(/^[+](\d+) to Intelligence$/, 30));
+
+            expect(conditionGroup.scanItem(item)).toBeTruthy();
         });
     });
 });

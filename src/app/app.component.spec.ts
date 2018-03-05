@@ -4,6 +4,10 @@ import {ElectronService} from "ngx-electron";
 import {ClipboardService} from "./clipboard/clipboard.service";
 import {ConditionService} from "./condition-service/condition.service";
 import {ClipboardServiceMock} from "./mocks/clipboard-service-mock";
+import {AppRoutingModule} from "./routing/app-routing-module";
+import {ItemListComponent} from "./item-list/item-list.component";
+import {SearchConfigComponent} from "./search-config/search-config.component";
+import {APP_BASE_HREF} from "@angular/common";
 
 
 describe('AppComponent', () => {
@@ -13,9 +17,15 @@ describe('AppComponent', () => {
             providers:[
                 ElectronService,
                 {provide: ClipboardService, useClass: ClipboardServiceMock},
-                ConditionService
+                ConditionService,
+                {provide: APP_BASE_HREF, useValue: './'}
+            ],
+            imports:[
+                AppRoutingModule
             ],
             declarations: [
+                SearchConfigComponent,
+                ItemListComponent,
                 AppComponent
             ],
         }).compileComponents();

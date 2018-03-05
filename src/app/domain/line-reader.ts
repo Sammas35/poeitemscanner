@@ -23,7 +23,7 @@ export class LineReader {
     next(): string {
         if (this.currentPos === undefined || this.currentPos === null) {
             this.currentPos = 0;
-        }else{
+        } else {
             this.currentPos++;
         }
 
@@ -44,7 +44,54 @@ export class LineReader {
         return result;
     }
 
+    readToItemLevel() {
+        let result: string;
+        do {
+            result = this.next();
+
+            if (this.isItemLevel(result)) {
+                return this.current();
+            }
+
+        } while (result !== null)
+    }
+
+    readAffixes(): string[] {
+        let result: string[] = [];
+        let line;
+
+        line = this.current();
+        while (line) {
+            if (this.isDivider(line)) {
+                line = this.next();
+            }
+
+            if (this.isAffixEnder(line)) {
+                return result;
+            }
+
+            result.push(line);
+            line = this.next();
+        }
+
+        return result;
+    }
+
     private isDivider(result: string): boolean {
         return result === '--------';
+    }
+
+    private isItemLevel(result: string) {
+        return result.startsWith('Item Level:');
+    }
+
+    private isAffixEnder(line: any) {
+        if (!line) {
+            return false;
+        }
+        if (line === "Shaper Item") {
+            return true;
+        }
+        return false;
     }
 }

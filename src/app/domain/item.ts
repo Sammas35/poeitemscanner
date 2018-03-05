@@ -15,18 +15,16 @@ export class Item {
         result.lineList = lineReader.lineList;
 
         line =  lineReader.next();
-        console.log('line : ', line);
         if (!result.readRarity(line)) {
             return null;
         }
 
         line =  lineReader.next();
-        console.log('line : ', line);
         if (!result.readName(line)) {
             return null;
         }
 
-        // lineReader.readToItemLevel();
+        lineReader.readToItemLevel();
 
         // if (!result.readName(lineReader.next())) {
         //     return null;
