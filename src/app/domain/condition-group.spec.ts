@@ -20,7 +20,7 @@ describe('ConditionGroup', function () {
             item = new Item();
             item.name = 'Strength Item';
 
-            item.lineList = [
+            item.affixList = [
                 '+32 to Strength'
             ];
 
@@ -40,7 +40,7 @@ describe('ConditionGroup', function () {
             item = new Item();
             item.name = 'Strength Item';
 
-            item.lineList = [
+            item.affixList = [
                 '+32 to Anything'
             ];
 
@@ -60,7 +60,7 @@ describe('ConditionGroup', function () {
             item = new Item();
             item.name = 'Strength Item';
 
-            item.lineList = [
+            item.affixList = [
                 '+32 to Strength',
                 '+32 to Dexterity'
             ];
@@ -81,7 +81,7 @@ describe('ConditionGroup', function () {
             item = new Item();
             item.name = 'Strength Item';
 
-            item.lineList = [
+            item.affixList = [
                 '+32 to Strength',
                 '+32 to Intelligence'
             ];
@@ -102,7 +102,7 @@ describe('ConditionGroup', function () {
             item = new Item();
             item.name = 'Strength Item';
 
-            item.lineList = [
+            item.affixList = [
                 '+32 to Strength',
                 '+32 to Intelligence'
             ];

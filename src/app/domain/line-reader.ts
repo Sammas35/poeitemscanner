@@ -92,6 +92,15 @@ export class LineReader {
         if (line === "Shaper Item") {
             return true;
         }
+        if (line === "Elder Item") {
+            return true;
+        }
+        if (line === "Place into an Abyssal Socket on an Item or into an allocated Jewel Socket on the Passive Skill Tree. Right click to remove from the Socket.") {
+            return true;
+        }
+        if (line.startsWith("Note:")) {
+            return true;
+        }
         return false;
     }
 }

@@ -40,7 +40,7 @@ export class Condition {
 
 
     scanItem(item: Item) {
-        if (item.lineList.some(line => {
+        if (item.affixList.some(line => {
                 return this.scanLine(line);
             })) {
             return true;

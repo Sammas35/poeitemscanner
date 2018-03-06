@@ -9,6 +9,8 @@ import {ElectronService, NgxElectronModule} from "ngx-electron";
 import { SearchConfigComponent } from './search-config/search-config.component';
 import { ItemListComponent } from './item-list/item-list.component';
 import {AppRoutingModule} from "./routing/app-routing-module";
+import {MasterdataService} from "./masterdata/masterdata.service";
+import {HttpClientModule} from "@angular/common/http";
 
 
 @NgModule({
@@ -19,10 +21,11 @@ import {AppRoutingModule} from "./routing/app-routing-module";
     ],
     imports: [
         BrowserModule,
+        HttpClientModule,
         AppRoutingModule,
         NgxElectronModule
     ],
-    providers: [ClipboardService, ItemScanner, ConditionService, ElectronService],
+    providers: [ClipboardService, ItemScanner, ConditionService, ElectronService, MasterdataService],
     bootstrap: [AppComponent]
 })
 export class AppModule {

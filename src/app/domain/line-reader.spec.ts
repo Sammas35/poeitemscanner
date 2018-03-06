@@ -261,5 +261,116 @@ describe('LineReader', function () {
             expect(lines[1]).toBe("128% increased Physical Damage");
             expect(lines[2]).toBe("+39 to Strength");
         });
+        it('should read affixes from implicit and explicit affixes and ignore from elder items on', function () {
+            let lines: string[];
+            lineReader = new LineReader('Rarity: Magic\r\n' +
+                'Bloodthirsty Eternal Sword of the Leviathan\r\n' +
+                '--------\r\n' +
+                'One Handed Sword\r\n' +
+                'Physical Damage: 93-155 (augmented)\r\n' +
+                'Critical Strike Chance: 5.00%\r\n' +
+                'Attacks per Second: 1.50\r\n' +
+                'Weapon Range: 9\r\n' +
+                '--------\r\n' +
+                'Requirements:\r\n' +
+                'Level: 66\r\n' +
+                'Str: 104\r\n' +
+                'Dex: 122\r\n' +
+                '--------\r\n' +
+                'Sockets: G R-G \r\n' +
+                '--------\r\n' +
+                'Item Level: 66\r\n' +
+                '--------\r\n' +
+                '+475 to Accuracy Rating\r\n' +
+                '--------\r\n' +
+                '128% increased Physical Damage\r\n' +
+                '+39 to Strength\r\n' +
+                '--------\r\n' +
+                'Elder Item\r\n');
+
+            lineReader.readToItemLevel();
+            lineReader.nextBlock();
+            lines = lineReader.readAffixes();
+            expect(lines.length).toBe(3);
+            expect(lines[0]).toBe("+475 to Accuracy Rating");
+            expect(lines[1]).toBe("128% increased Physical Damage");
+            expect(lines[2]).toBe("+39 to Strength");
+        });
+        it('should read affixes from implicit and explicit affixes and ignore from abyssal items on', function () {
+            let lines: string[];
+            lineReader = new LineReader('Rarity: Magic\r\n' +
+                'Bloodthirsty Eternal Sword of the Leviathan\r\n' +
+                '--------\r\n' +
+                'One Handed Sword\r\n' +
+                'Physical Damage: 93-155 (augmented)\r\n' +
+                'Critical Strike Chance: 5.00%\r\n' +
+                'Attacks per Second: 1.50\r\n' +
+                'Weapon Range: 9\r\n' +
+                '--------\r\n' +
+                'Requirements:\r\n' +
+                'Level: 66\r\n' +
+                'Str: 104\r\n' +
+                'Dex: 122\r\n' +
+                '--------\r\n' +
+                'Sockets: G R-G \r\n' +
+                '--------\r\n' +
+                'Item Level: 66\r\n' +
+                '--------\r\n' +
+                '+475 to Accuracy Rating\r\n' +
+                '--------\r\n' +
+                '128% increased Physical Damage\r\n' +
+                '+39 to Strength\r\n' +
+                '--------\r\n' +
+                'Place into an Abyssal Socket on an Item or into an allocated Jewel Socket on the Passive Skill Tree. Right click to remove from the Socket.\r\n' +
+                '128% increased Physical Damage\r\n' +
+                '+39 to Strength\r\n'
+            );
+
+            lineReader.readToItemLevel();
+            lineReader.nextBlock();
+            lines = lineReader.readAffixes();
+            expect(lines.length).toBe(3);
+            expect(lines[0]).toBe("+475 to Accuracy Rating");
+            expect(lines[1]).toBe("128% increased Physical Damage");
+            expect(lines[2]).toBe("+39 to Strength");
+        });
+        it('should read affixes from implicit and explicit affixes and ignore from Note items on', function () {
+            let lines: string[];
+            lineReader = new LineReader('Rarity: Magic\r\n' +
+                'Bloodthirsty Eternal Sword of the Leviathan\r\n' +
+                '--------\r\n' +
+                'One Handed Sword\r\n' +
+                'Physical Damage: 93-155 (augmented)\r\n' +
+                'Critical Strike Chance: 5.00%\r\n' +
+                'Attacks per Second: 1.50\r\n' +
+                'Weapon Range: 9\r\n' +
+                '--------\r\n' +
+                'Requirements:\r\n' +
+                'Level: 66\r\n' +
+                'Str: 104\r\n' +
+                'Dex: 122\r\n' +
+                '--------\r\n' +
+                'Sockets: G R-G \r\n' +
+                '--------\r\n' +
+                'Item Level: 66\r\n' +
+                '--------\r\n' +
+                '+475 to Accuracy Rating\r\n' +
+                '--------\r\n' +
+                '128% increased Physical Damage\r\n' +
+                '+39 to Strength\r\n' +
+                '--------\r\n' +
+                'Note: ~price 5 chaos\r\n' +
+                '128% increased Physical Damage\r\n' +
+                '+39 to Strength\r\n'
+            );
+
+            lineReader.readToItemLevel();
+            lineReader.nextBlock();
+            lines = lineReader.readAffixes();
+            expect(lines.length).toBe(3);
+            expect(lines[0]).toBe("+475 to Accuracy Rating");
+            expect(lines[1]).toBe("128% increased Physical Damage");
+            expect(lines[2]).toBe("+39 to Strength");
+        });
     });
 });

@@ -16,7 +16,7 @@ describe('ItemScanner', function () {
 
         item = new Item();
         item.name = 'Strength Item';
-        item.lineList = [
+        item.affixList = [
             '+32 to Strength',
             '110% increased Physical Damage'
         ];

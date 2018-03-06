@@ -4,6 +4,7 @@ export class Item {
     rarity: string;
     name: string;
     lineList: string[];
+    affixList: string[];
 
     static createFromString(text: string): Item {
         let result: Item = new Item();
@@ -12,7 +13,7 @@ export class Item {
 
         lineReader = new LineReader(text);
 
-        result.lineList = lineReader.lineList;
+        result.affixList = lineReader.lineList;
 
         line =  lineReader.next();
         if (!result.readRarity(line)) {
@@ -25,10 +26,8 @@ export class Item {
         }
 
         lineReader.readToItemLevel();
-
-        // if (!result.readName(lineReader.next())) {
-        //     return null;
-        // }
+        lineReader.nextBlock();
+        result.affixList = lineReader.readAffixes();
 
         // Name
         // BaseStats
